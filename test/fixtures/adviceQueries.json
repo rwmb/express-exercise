@@ -1,0 +1,21 @@
+{
+  "valid": [
+    "1",
+    "2",
+    "spiders",
+    "snakes",
+    "food"
+  ],
+  "nonexistent": [
+    "nonexistent",
+    "unknown",
+    "missing"
+  ],
+  "invalid": [
+    {},
+    [],
+    true,
+    false,
+    45.6
+  ]
+}

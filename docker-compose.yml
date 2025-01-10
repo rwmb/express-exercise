@@ -1,9 +1,10 @@
-version: '3.7'
 services:
   api:
     build:
       context: .
       dockerfile: docker/images/app/Dockerfile
+    env_file:
+      - .env
     ports:
       - '3150:3150'
     depends_on:
@@ -16,7 +17,10 @@ services:
 
   db:
     image: postgres:12.1
+    env_file:
+      - .env
     volumes:
-      - $PWD/bin/db-setup:/bin/db-setup
+      - ./bin/db-setup:/bin/db-setup
+
     ports:
       - '5400:5432'

@@ -36,7 +36,7 @@ app.use((err, req, res, next) => {
     error.title = 'API server encountered an unexpected error.';
   }
 
-  res.status(status).json(error);
+  res.status(status).json(error); // Sanitize error message before sending to client
   next();
 });
 
